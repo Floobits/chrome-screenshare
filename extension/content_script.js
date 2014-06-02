@@ -11,8 +11,8 @@ function receiveMessage(event) {
 window.addEventListener("message", receiveMessage, false);
 
 function main() {
-  $("#fl_webrtc_no_extension").hide();
-  $("#fl_webrtc_start_screen").show();
+  document.getElementById("fl_webrtc_no_extension").style.display = "none";
+  document.getElementById("fl_webrtc_start_screen").style.display = "block";
 }
 
 main();

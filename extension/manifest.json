@@ -2,7 +2,8 @@
   "manifest_version": 2,
   "name": "Floobits Screen Sharing",
   "description": "Share your screen in Floobits",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "minimum_chrome_version": "35",
   "icons": {
     "16": "images/icon_16x16.png",
     "64": "images/icon_64x64.png"
