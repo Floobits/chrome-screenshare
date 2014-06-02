@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Floobits Screen Sharing",
-  "description": "Share your screen in Floobits or whatever.",
+  "description": "Share your screen in Floobits",
   "version": "0.1.0",
   "icons": {
     "16": "images/icon_16x16.png",
