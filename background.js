@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, cb) {
     return true;
   }
   console.log("chooseDesktopMedia");
-  chrome.desktopCapture.chooseDesktopMedia(["screen", "window"], function (id) {
+  chrome.desktopCapture.chooseDesktopMedia(["screen", "window"], sender.tab, function (id) {
     console.log("chose", id);
     cb(id);
   });
