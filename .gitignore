@@ -1,0 +1,7 @@
+.DS_Store
+.sublime-project
+*.tar.gz
+*.iml
+.idea
+.flooignore
+.floo
