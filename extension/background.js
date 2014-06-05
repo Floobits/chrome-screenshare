@@ -1,3 +1,5 @@
+/*global chrome*/
+
 chrome.runtime.onMessage.addListener(function (msg, sender, cb) {
   if (!msg || msg.action !== "getScreen") {
     return true;

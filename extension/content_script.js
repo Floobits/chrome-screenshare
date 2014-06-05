@@ -1,3 +1,4 @@
+/*global chrome*/
 
 function receiveMessage(event) {
   if (event.data.text !== "flooScreenShare") {
@@ -11,8 +12,10 @@ function receiveMessage(event) {
 window.addEventListener("message", receiveMessage, false);
 
 function main() {
-  document.getElementById("fl_webrtc_no_extension").style.display = "none";
-  document.getElementById("fl_webrtc_start_screen").style.display = "block";
+  try {
+    document.getElementById("fl_webrtc_no_extension").style.display = "none";
+    document.getElementById("fl_webrtc_start_screen").style.display = "block";
+  } catch (ignore) {}
 }
 
 main();
