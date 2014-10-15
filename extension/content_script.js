@@ -1,21 +1,28 @@
 /*global chrome*/
+"use strict";
 
 function receiveMessage(event) {
   if (event.data.text !== "flooScreenShare") {
     return;
   }
-  chrome.runtime.sendMessage({action: "getScreen"}, function (id) {
-    window.postMessage({name: "flooScreenShareResponse", id: id}, "*");
-  });
+  switch (event.data.text) {
+    case: "flooScreenShare":
+      chrome.runtime.sendMessage({action: "getScreen"}, function (id) {
+        window.postMessage({name: "flooScreenShareResponse", id: id}, "*");
+      });
+      break;
+    case: "flooScreenDoWeHaveAnExtension":
+      chrome.runtime.sendMessage({action: "getScreen"}, function (id) {
+        window.postMessage({name: "flooScreenHasExtension", id: id}, "*");
+      });
+      break;
+  }
 }
 
 window.addEventListener("message", receiveMessage, false);
 
 function main() {
-  try {
-    document.getElementById("fl_webrtc_no_extension").style.display = "none";
-    document.getElementById("fl_webrtc_start_screen").style.display = "block";
-  } catch (ignore) {}
+  console.log("Loaded Floobits screen sharing extension.");
 }
 
 main();
