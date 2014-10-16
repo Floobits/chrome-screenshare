@@ -3,14 +3,14 @@
 
 function receiveMessage(event) {
   switch (event.data.text) {
-    case "flooScreenDoWeHaveAnExtension":
-      window.postMessage({name: "flooScreenHasExtension"}, "*");
-      break;
-    case "flooScreenShare":
-      chrome.runtime.sendMessage({action: "getScreen"}, function (id) {
-        window.postMessage({name: "flooScreenShareResponse", id: id}, "*");
-      });
-      break;
+  case "flooScreenDoWeHaveAnExtension":
+    window.postMessage({name: "flooScreenHasExtension"}, "*");
+    break;
+  case "flooScreenShare":
+    chrome.runtime.sendMessage({action: "getScreen"}, function (id) {
+      window.postMessage({name: "flooScreenShareResponse", id: id}, "*");
+    });
+    break;
   }
 }
 
