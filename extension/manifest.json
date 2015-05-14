@@ -11,13 +11,15 @@
   "permissions": [
     "desktopCapture",
     "https://*.floobits.com/*",
-    "https://*.floobits-enterprise.com/*"
+    "https://*.floobits-enterprise.com/*",
+    "https://dev.fixtheco.de/*"
   ],
   "externally_connectable": {
     "ids": "*",
     "matches": [
       "https://*.floobits.com/*",
-      "https://*.floobits-enterprise.com/*"
+      "https://*.floobits-enterprise.com/*",
+      "https://dev.fixtheco.de/*"
     ]
   },
   "background": {
@@ -28,7 +30,8 @@
     {
       "matches": [
         "https://*.floobits.com/*",
-        "https://*.floobits-enterprise.com/*"
+        "https://*.floobits-enterprise.com/*",
+        "https://dev.fixtheco.de/*"
       ],
       "js": ["content_script.js"]
     }
