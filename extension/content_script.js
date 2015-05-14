@@ -12,6 +12,9 @@ function receiveMessage(event) {
       window.postMessage({name: "flooScreenShareResponse", id: id}, "*");
     });
     break;
+  case "startImport":
+    console.log("starting import from chrome ext");
+    break;
   }
 }
 
