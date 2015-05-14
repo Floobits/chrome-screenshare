@@ -1,10 +1,11 @@
 /*global chrome*/
 "use strict";
+var manifest = chrome.runtime.getManifest();
 
 function receiveMessage(event) {
   switch (event.data.text) {
   case "flooScreenDoWeHaveAnExtension":
-    window.postMessage({name: "flooScreenHasExtension"}, "*");
+    postVersion();
     break;
   case "flooScreenShare":
     chrome.runtime.sendMessage({action: "getScreen"}, function (id) {
@@ -14,10 +15,13 @@ function receiveMessage(event) {
   }
 }
 
+function postVersion () {
+  window.postMessage({name: "flooScreenHasExtension", version: manifest.version}, "*");
+}
 
 function main() {
   window.addEventListener("message", receiveMessage, false);
-  window.postMessage({name: "flooScreenHasExtension"}, "*");
+  postVersion();
 }
 
 main();
