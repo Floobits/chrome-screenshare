@@ -24,7 +24,7 @@
   },
   "background": {
     "persistent": true,
-    "scripts": ["background.js"]
+    "scripts": ["js/background.js", "js/lodash.js"]
   },
   "content_scripts": [
     {
@@ -33,7 +33,7 @@
         "https://*.floobits-enterprise.com/*",
         "https://dev.fixtheco.de/*"
       ],
-      "js": ["content_script.js"]
+      "js": ["js/content_script.js"]
     }
   ]
 }
