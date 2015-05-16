@@ -4,12 +4,19 @@
   "description": "Share your screen in Floobits",
   "version": "2.1.4",
   "minimum_chrome_version": "38",
+  "app": {
+    "background": {
+      "persistent": true,
+      "scripts": ["js/background.js", "js/lodash.js"]
+    }
+  },
   "icons": {
     "16": "images/icon_16x16.png",
     "64": "images/icon_64x64.png"
   },
   "permissions": [
     "desktopCapture",
+    "fileSystem",
     "https://*.floobits.com/*",
     "https://*.floobits-enterprise.com/*",
     "https://dev.fixtheco.de/*"
@@ -21,19 +28,5 @@
       "https://*.floobits-enterprise.com/*",
       "https://dev.fixtheco.de/*"
     ]
-  },
-  "background": {
-    "persistent": true,
-    "scripts": ["js/background.js", "js/lodash.js"]
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://*.floobits.com/*",
-        "https://*.floobits-enterprise.com/*",
-        "https://dev.fixtheco.de/*"
-      ],
-      "js": ["js/content_script.js"]
-    }
-  ]
+  }
 }
