@@ -16,6 +16,7 @@
   },
   "permissions": [
     "desktopCapture",
+    "tabs",
     "fileSystem",
     "https://*.floobits.com/*",
     "https://*.floobits-enterprise.com/*",
