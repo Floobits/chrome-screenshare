@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Floobits Screen Sharing",
-  "description": "Share your screen in Floobits",
-  "version": "0.1.4",
+  "name": "Floobits Enterprise Screen Sharing",
+  "description": "Share your screen in Floobits Enterprise. Due to restrictions in Chrome extension permissions, this secondary plugin is needed for Floobits Enterprise users.",
+  "version": "1.0.0",
   "minimum_chrome_version": "38",
   "icons": {
     "16": "images/icon_16x16.png",
@@ -11,13 +11,17 @@
   "permissions": [
     "desktopCapture",
     "https://*.floobits.com/*",
-    "https://*.floobits-enterprise.com/*"
+    "https://*.floobits-enterprise.com/*",
+    "https://*.floobits.bats.com/*",
+    "https://*.floobits.louis.de/*"
   ],
   "externally_connectable": {
     "ids": "*",
     "matches": [
       "https://*.floobits.com/*",
-      "https://*.floobits-enterprise.com/*"
+      "https://*.floobits-enterprise.com/*",
+      "https://*.floobits.bats.com/*",
+      "https://*.floobits.louis.de/*"
     ]
   },
   "background": {
@@ -28,7 +32,9 @@
     {
       "matches": [
         "https://*.floobits.com/*",
-        "https://*.floobits-enterprise.com/*"
+        "https://*.floobits-enterprise.com/*",
+        "https://*.floobits.bats.com/*",
+        "https://*.floobits.louis.de/*"
       ],
       "js": ["content_script.js"]
     }
