@@ -1,4 +1,5 @@
 /*global chrome*/
+"use strict";
 
 chrome.runtime.onMessage.addListener(function (msg, sender, cb) {
   if (!msg || msg.action !== "getScreen") {
