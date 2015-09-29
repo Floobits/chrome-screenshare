@@ -13,7 +13,9 @@
     "https://*.floobits.com/*",
     "https://*.floobits-enterprise.com/*",
     "https://*.floobits.bats.com/*",
-    "https://*.floobits.louis.de/*"
+    "https://*.floobits.louis.de/*",
+    "https://*.ship.software/*",
+    "https://*.fixtheco.de/*"
   ],
   "externally_connectable": {
     "ids": "*",
@@ -21,7 +23,9 @@
       "https://*.floobits.com/*",
       "https://*.floobits-enterprise.com/*",
       "https://*.floobits.bats.com/*",
-      "https://*.floobits.louis.de/*"
+      "https://*.floobits.louis.de/*",
+      "https://*.ship.software/*",
+      "https://*.fixtheco.de/*"
     ]
   },
   "background": {
@@ -34,7 +38,9 @@
         "https://*.floobits.com/*",
         "https://*.floobits-enterprise.com/*",
         "https://*.floobits.bats.com/*",
-        "https://*.floobits.louis.de/*"
+        "https://*.floobits.louis.de/*",
+        "https://*.ship.software/*",
+        "https://*.fixtheco.de/*"
       ],
       "js": ["content_script.js"]
     }
